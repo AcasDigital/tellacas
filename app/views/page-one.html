@@ -1,0 +1,75 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<!-- <a href="01-representing" class="govuk-back-link">Back</a> -->
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+
+    <form class="form" action="/page-one-email" method="post">
+
+
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="page-header" style="font-size: 1em;  font-family: Arial; font-weight:bold;">
+            How would you prefer to be contacted?
+
+          </h1>
+        </legend>
+        <div id="changed-name-hint" class="govuk-hint">
+         We can start early concilation sooner if you provide your phone number and email. We never use your details for any other purpose.
+          <!-- This will only be used to send you updates on the case or ask for more information needed for your case. -->
+        </div>
+        <div class="govuk-radios govuk-radios--inline-">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contact-phone-email" name="contacted" type="radio" value="email">
+            <label class="govuk-label govuk-radios__label" for="contact-phone-email">
+              Phone and email
+            </label>
+          </div>
+          <div class="govuk-radios govuk-radios--inline-">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-email" name="contacted" type="radio" value="emailonly">
+              <label class="govuk-label govuk-radios__label" for="contact-email">
+                Email only
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-post-phone" name="contacted" type="radio" value="post-phone">
+              <label class="govuk-label govuk-radios__label" for="contact-post-phone">
+                Post and phone
+              </label>
+            </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contact-post" name="contacted" type="radio" value="post">
+            <label class="govuk-label govuk-radios__label" for="contact-post">
+            Post only
+            </label>
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+
+
+
+
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}

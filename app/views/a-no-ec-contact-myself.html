@@ -1,0 +1,117 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="a-02-represent-myself" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+
+    <form class="form" action="/page-one-email-no-ec-myself" method="post">
+
+
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="page-header" style="font-size: .9em;  font-family: Arial; font-weight:bold;">
+            How would you like get the certificate?
+           </h1>
+        </legend>
+        <div id="changed-name-hint" class="govuk-hint">
+
+          <div id="email-hint" class="govuk-hint">
+    We’ll only use this to send you a certificate. Post may take longer.
+  </div>
+          <!-- <p class="govuk-hint">  You will be able get your certificate quicker if you provide your  email address.  </p> -->
+        <!-- <p class="govuk-hint">
+          We never use your details for any other purpose.
+        </p> -->
+            <!-- <br>
+          If you choose post it will take longer to get your certificate. -->
+        </div>
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+
+
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact" name="contacted" type="radio" value="email" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-radios__label" for="contact">
+                  Email
+                </label>
+              </div>
+
+              <!-- <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="contacted" type="radio" value="email-phone" data-aria-controls="conditional-contact-2">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  Email and phone
+                </label>
+              </div> -->
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="contacted" type="radio" value="post" data-aria-controls="conditional-contact-3">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Post
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-text">
+
+                    You will be able get your certificate quicker if you provide your email address.
+                    It may take onger to recieve to get your certificate via post.
+                    <!-- We never use your details for any other purpose. -->
+
+                  </label>
+                  </div>
+
+              <!-- </div> -->
+              <!-- <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-3" name="contacted" type="radio" value="post and phone" data-aria-controls="conditional-contact-4">
+                <label class="govuk-label govuk-radios__label" for="contact-3">
+                  Post and phone
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-text">
+
+                    You will be able to talk to us about your dispute quicker if you provide your phone number and email address.
+                    We never use your details for any other purpose.
+
+                  </label>
+                  </div> -->
+
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+
+
+
+      </fieldset>
+    </div>
+
+
+
+
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}

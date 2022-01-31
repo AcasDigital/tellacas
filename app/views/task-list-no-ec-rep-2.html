@@ -1,0 +1,221 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Task list
+{% endblock %}
+
+{% block content %}
+
+<a href="a-01-represent" class="govuk-back-link">Back</a>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <h1 class="page-header" style="font-size: 2em;  font-family: Arial; font-weight:bold;">
+    Find a solution to your employment dispute
+      </h1>
+
+      <!-- <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Incomplete</h2>
+      <p class="govuk-body govuk-!-margin-bottom-7">You have completed 2 of 6 sections.</p> -->
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> Enter claimant details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="a-full-name.html?change=false" aria-describedby="eligibility-status">
+                  Your legal name
+                </a>
+              </span>
+
+              {% if  data['full-name'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+              {% endif %}
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="a-address.html?change=false" aria-describedby="read-declaration-status">
+                Your address name
+                </a>
+              </span>
+              {% if  data['address_line_1'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+              {% endif %}
+              <!-- <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong> -->
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> Enter representative details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="company-information-status">
+                Representative's name
+                </a>
+              </span>
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="contact-details-status">
+                  Representative's contact details
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            </li>
+            <!-- <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="list-convictions-status">
+                  List convictions
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Provide financial evidence
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="financial-evidence-status">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Give medical information
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="medical-information-status">Cannot start yet</strong>
+            </li> -->
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Enter employers' details
+          </h2>
+          <ul class="app-task-list__items">
+            <!-- <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="company-information-status">
+                Employers' name
+                </a>
+              </span>
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            </li> -->
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="a-employer" aria-describedby="contact-details-status">
+                  Employers' details
+                </a>
+              </span>
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="a-employer" aria-describedby="contact-details-status">
+                Add more
+              </a>
+            </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+        </li> <!-- <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="list-convictions-status">
+                  List convictions
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Provide financial evidence
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="financial-evidence-status">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Give medical information
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="medical-information-status">Cannot start yet</strong>
+            </li> -->
+          </ul>
+        </li>
+
+        <!-- <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Enter details about your dispute
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="company-information-status">
+                Reason for your dispute
+                </a>
+              </span>
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="contact-details-status">
+                  How much do you want to claim?
+                </a>
+              </span>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            </li>
+            <!-- <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="list-convictions-status">
+                  List convictions
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Provide financial evidence
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="financial-evidence-status">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Give medical information
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="medical-information-status">Cannot start yet</strong>
+            </li>
+          </ul>
+        </li> -->
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">4. </span> Check your answer and send to ACAS
+          </h2>
+          <ul class="app-task-list__items">
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="check-your-answers" aria-describedby="contact-details-status">
+                  Check your answers and send
+                </a>
+              </span>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            </li>
+
+            <!-- <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Submit and pay
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>
+            </li> -->
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,71 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="task-list" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+
+      {% if data['change'] == "true" %}
+        <form action="check-your-answers#respondent-details">
+
+      {% else %}
+
+        <form action="task-list#respondent-details">
+      {% endif %}
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="page-header" style="font-size: .9em; font-family: Arial; font-weight:bold;">
+
+             Can we speak to them before speaking with you? (optional)
+
+              <!-- Can we speak to the them organisation your dispute is against before speaking with you? -->
+            </h1>
+          </legend>
+          <div id="changed-name-hint" class="govuk-hint">
+            <!-- We need to speak to the organisation you're making a claim against to understand if they are willing to take part in conciliation.<br><br>
+          If we speak to them first it can save everyone time and give us more time for conciliation to take place. -->
+
+            If we speak to them first it can give us more time for conciliation to take place
+
+          </div>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name" name="company-1-consent" type="radio" value="Yes" {{ checked('company-1-consent','Yes') }}>
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="company-1-consent" type="radio" value="No" {{ checked('company-1-consent','No') }}>
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                No
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+
+
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}

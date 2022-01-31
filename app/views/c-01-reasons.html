@@ -1,0 +1,154 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+<a href="task-list" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+
+
+            {% if data['change'] == "true" %}
+              <form action="check-your-answers#dispute">
+
+            {% else %}
+
+              <form action="task-list">
+            {% endif %}
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading" style="font-size: .9em; font-family: Arial; font-weight:bold;">
+              What is the reason for your dispute? (optional)
+            </h1>
+          </legend>
+          <div id="sign-in-hint" class="govuk-hint">
+          <!-- Please get legal advice to understand what you can make a claim against -->
+<!--
+          Your conversation with Acas is not part of the employment tribunal process. We will only use the information you give to discuss your options with you, and we can only involve your employer in discussions if you give your permission. -->
+          </div>
+          <div class="govuk-radios">
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="wages-holiday" aria-describedby="sign-in-item-hint" {{ checked('reason','wages-holiday') }}>
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+              Wages owed or holiday pay
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+              You could be owed money instead of holiday, or your employer hasn’t paid you, or has taken money from your wages without good reason.
+              </div>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="redundancy" aria-describedby="sign-in-item-hint" {{ checked('reason','redundancy') }}>
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+              Redundancy pay
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          You could be owed money if the employer didn't follow the right process, including collective consultation and giving the right notice periods and pay.
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="discrimination" aria-describedby="sign-in-item-hint" {{ checked('reason','discrimination') }}>
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+              Discrimination
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+              You could be make claim if there has been a case of discrimination based on disability, age, race, religion & belief, sex, marriage, gender reassignment, and or sexual orientation.
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in-2" name="reason" type="radio" value="wrongful-dismissal" aria-describedby="wrongful-dismissal">
+              <label class="govuk-label govuk-radios__label" for="sign-in-2">
+                Wrongful dismissal
+              </label>
+              <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+              Wrongful dismissal is a claim for a breach of the employment contract. The most common breach is where the employer dismissed the employee without notice or with less than the minimum notice period
+              </div>
+            </div>
+          </div>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+            Unfair dismissal
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+            If you think your dismissal was unfair you might be able to challenge it. You must have 2 years service to make this cliam.
+            <!--  Read more about. <a href="https://www.acas.org.uk/dismissals/unfair-dismissal" target="_blank"> unfair dismissal here</a>. -->
+              </div>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+            Constructive dismissal
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+        Constructive dismissal occurs when an employee resigns as a result of the employer creating a hostile work environment. Since the resignation was not truly voluntary, it is, in effect, a termination.
+          You must have 2 years service to make this cliam.
+            <!-- Read more about <a href="https://www.acas.org.uk/dismissals/constructive-dismissal" target="_blank"> constructive dismissal here</a>. -->
+              </div>
+            </div>
+
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+            Equal pay
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          You could be owed money if could you feel your employer has failed to provide equal pay.
+              </div>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+          Whistle blowing
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+              Whistleblowing needs to relate to a Public Interest Disclosure (i.e. they raised a concern that was in the public interest)
+
+              </div>
+            </div>
+
+
+
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+              I'm not sure
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+              If you are not sure, please get legal advice to understand what you can make a claim against.
+              </div>
+            </div>
+
+
+        </fieldset>
+      </div>
+
+
+
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}

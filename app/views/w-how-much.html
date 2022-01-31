@@ -1,0 +1,56 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="task-list" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="page-header" style="font-size: 1.6em; font-family: Arial; font-weight:bold;">
+    {% if  data['representing'] == "myself" %}  How much money do you think you are owed? (optional)
+    {% else %}
+How much money does the claimant think their are owed? (optional)
+            {% endif %}
+
+
+      </h1>
+
+
+      {% if data['change'] == "true" %}
+        <form action="check-your-answers#name">
+
+      {% else %}
+
+        <form action="task-list">
+      {% endif %}
+
+
+<br>
+    <div class="govuk-form-group">
+    <label class="govuk-label" for="amount">
+        Enter amount you if know how much is owed
+      </label>
+      <div id="more-detail-hint" class="govuk-hint">
+  Useful link on GOV.UK to a <a href="https://www.gov.uk/calculate-your-holiday-entitlement" target="_blank" rel="noopener noreferrer">tool to calculate holiday entitlement (opens in a new window or tab)</a>
+  </div>   <!-- -->
+      <!-- <input class="govuk-input" id="full-name" name="w-how-much" type="text" spellcheck="false" autocomplete="name" value="{{ data['w-how-much'] }}"></div> -->
+<br>
+      <div class="govuk-input__wrapper">
+         <div class="govuk-input__prefix" aria-hidden="true">£</div>
+         <input class="govuk-input govuk-input--width-5" id="amount" name="w-how-much" type="text" spellcheck="false" value="{{ data['w-how-much'] }}">
+       </div>
+
+<br>
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}

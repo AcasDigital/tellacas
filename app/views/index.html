@@ -29,11 +29,12 @@
 
 
 
-      <p>Use this service to start the legal process in which you tell Acas that:</p>
+      <p>Use this service to start the legal process in which you notify Acas that you want to:</p>
 
       <ul class="govuk-list govuk-list--bullet">
-          <li> get a certificate to make a claim to an employment tribunal </li>
-<li>try early concilation</li>
+        <li>try early concilation</li>
+          <li>get a certificate to make a claim to an employment tribunal </li>
+
 
 
       <!-- <li>you have a dispute with your employer </li>
@@ -53,7 +54,7 @@
 
 
 
-        <a class="gem-c-button govuk-button govuk-button--start acas-branding" role="button" rel="external" data-module="cross-domain-tracking" data-tracking-code="UA-43414424-1" data-tracking-name="transactionTracker" href="start-page">  Prototype start page
+        <a class="gem-c-button govuk-button govuk-button--start acas-branding" role="button" rel="external" data-module="cross-domain-tracking" data-tracking-code="UA-43414424-1" data-tracking-name="transactionTracker" href="start">  Prototype start page
         <svg class="govuk-button__start-icon govuk-!-display-none-print" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewbox="0 0 33 40" role="presentation" focusable="false">
           <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
         </svg>
@@ -85,9 +86,13 @@
             </svg>
           </a>
 
-
-
+<br>
+          <a href="public/images/assessment-slides.pdf" target="_blank"> Link to slide deck for Alpha assessment with an introduction to the service</a>
+          <br>
+                  <br>    
               </p>
+
+
 
 
 
@@ -183,7 +188,7 @@
           <details class="govuk-details">
             <summary class="govuk-details__summary">
 
-              <span class="govuk-details__summary-text">
+              <span class="govuk-details__summary-text" id="version-history">
                 Version history
               </span>
             </summary>
@@ -191,7 +196,7 @@
           	    <h3 class="govuk-heading-m"><span class="govuk-caption-m">7 Febuary 2022</span>  Version 3 </h3>
           	  <ul class="list list-bullet">
                 <li>
-                  <a href="https://acas2-alpha.herokuapp.com" target="_blank">https://acas2-alpha.herokuapp.com</a>
+                  <a href="https://acas3-alpha.herokuapp.com" target="_blank">https://acas3-alpha.herokuapp.com</a>
                   <br>
 
                   <strong>Username:</strong> acas
@@ -202,11 +207,11 @@
 
 
           		<li>
-          	  <p>  <strong>Made changes based on  <a href="#" target="_blank"> findings</a> from user testing sessions with Claimants and Professionals from 24 January 2022 to 4 Febuary 2022. </strong></p>
+          	  <p>  <strong>Made changes based on  <a href="public/images/findings-04.pdf" target="_blank"> findings</a> from user testing sessions with Claimants and Professionals from 24 January 2022 to 4 Febuary 2022. </strong></p>
 
 
               <ol class="govuk-list govuk-list--number">
-                <li>Based on user testing, we have removed a link to <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">Companies House information</a> on GOV.UK, if they have ‘Plc’, ‘ltd’ or ‘Limited’ at the end of their name, to lookup organisation's legal name and address under hint text. </li>
+                <li>Based on user testing, we have removed links to <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">Companies House information</a> and <a href="https://get-information-schools.service.gov.uk" target="_blank">Information about schools</a> on GOV.UK, to lookup organisation's legal name and address under hint text. </li>
 
                 <li>We shared our resaerch on GDS design system <a href="https://github.com/alphagov/govuk-design-system-backlog/issues/72" target="_blank"> 'Task list pages' discussion on GitHub </a>. Based on recommendation we are experimenting with adding something like "You have completed X of Y required sections [and U of V optional sections]"</li>
                 <li>Based on negative emotional reaction from users, the questions "Can we speak to them(organistaion or person the dsipute is against) before we speak to you?" has been reomved. One user said this would create a panic and most likely, stop her submiting the form. One user said "this is creepy" and many others had long pause, didn't understand why this question was been asked.</li>
@@ -247,10 +252,10 @@
                 <li>To help user with Accessibility needs we have added we have added "Need help" section in the footer. This has a link to helpline. They’ll fill in the form for the user over the phone. Also, there is link to download the paper version of the form. </li>
                 <!-- <li>We are trying an alternate version for question about "What is the reason for your dispute?" which has checkboxes instead od radio to make it easier for users to select multiple reasons for your dispute.</li> -->
                 <li>We are trying a variation of the start page, which has has the start button higher up, based on user feedback and shows the step by step journey for users that want to try early conciliation.</li>
-                <li>Important information about time limits has been added. </li>
+                <!-- <li>Important information about time limits has been added. </li> -->
                 <li>Made more changes based on findings and recommendations from the new DAC accessibility report in December. </li>
                 <li>Made more content changes to questions based user testing sessions and recommendations from ECSOs and conciliators. </li>
-                <li>Created another version of the user journeys without the tasklist pattern. User were asked to test and compare, after testing both prototypes. One with the task list pattern and one without the task list pattern. User cleared said they preferred the version with the tasklist pattern.  </li>
+                <li>Created another version of the user journeys without the tasklist pattern. User were asked to test and compare, after testing both prototypes. One with the task list pattern and one without the task list pattern. Users said they preferred the version with the tasklist pattern.  </li>
               </ol>
 
               </li>
@@ -272,7 +277,7 @@
 
 
                 <li>
-                <p> <strong> Made changes based on  <a href="#" target="_blank"> findings</a> from user testing sessions with Claimants and Professionals from 9 December 2021  to 23 December 2021. </strong> </p>
+                <p> <strong> Made changes based on  <a href="public/images/findings-02.pdf" target="_blank"> findings</a> from user testing sessions with Claimants and Professionals from 9 December 2021  to 23 December 2021. </strong> </p>
 
                 <ol class="govuk-list govuk-list--number">
                   <li>Based feedback from professional reprentative we added warning "If early conciliation is not successful you can still go to the employment tribunal." to "Why try early conciliation?" under "Would you like to try the free early conciliation service?" question.</li>
@@ -322,7 +327,7 @@
 <p> <strong> Started work on prototype based on  <a href="public/images/user-needs.pdf" target="_blank"> user needs</a> from findings in the <a class="govuk-link" href="https://www.acas.org.uk/sites/default/files/2021-07/IDR%20Discovery%20-%20Final%20Report%202021_1.pdf" target="_blank"> discovery report </a> and <a href="public/images/findings-01.pdf" target="_blank">user interview sessions</a>  with ECSOs and conciliators from 19 November 2021  to 8 December 2021. </strong> </p>
 
 <ol class="govuk-list govuk-list--number">
-  <li>Started to use one question per page as recommended by the GDS in the last assessment.</li>
+  <li>Started to use one question per page as recommended by the GDS assesmnet panel, in the last assessment report.</li>
   <li>Started to use progressive disclosure to show relavent content based on users input (branching).</li>
 
 <!-- <li>  Started to show different pages depending on user input (branching)</li> -->

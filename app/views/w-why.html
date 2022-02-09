@@ -8,41 +8,44 @@
 {% block content %}
 
 <a href="task-list" class="govuk-back-link">Back</a>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      <h1 class="page-header" style="font-size: 1.6em; font-family: Arial; font-weight:bold;">
-        {% if  data['representing'] == "myself" %}
-      Why do you think you are owed this money? (optional)
 
-      {% else %}
+
+
+<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+  <div class="govuk-form-group">
+    <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="with-hint">
+      {% if  data['representing'] == "myself" %}
+    Why do you think you are owed this money? (optional)
+
+    {% else %}
 Why does the claimant think their are owed this money? (optional)
-        {% endif %}
-        <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
-      </h1>
-
-
-      {% if data['change'] == "true" %}
-        <form action="check-your-answers#name">
-
-      {% else %}
-
-        <form action="task-list">
       {% endif %}
-
-
-<br>
-    <div class="govuk-form-group">
-    <label class="govuk-label" for="more-detail">
-        Give details about what’s happened
       </label>
-        <div id="more-detail-hint" class="govuk-hint">
-Keep it brief and do not include personal or financial information like National Insurance number or credit card details.  You’ll have the chance to tell us more later on.
+    </h1>
+
+    {% if data['change'] == "true" %}
+      <form action="check-your-answers#reason">
+
+    {% else %}
+
+      <form action="task-list#reason">
+    {% endif %}
+
+    <div id="with-hint-hint" class="govuk-hint">
+      Keep it brief and do not include personal or financial information like National Insurance number or credit card details.  You’ll have the chance to tell us more later on.
+    </div>
+    <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="w-why" rows="5" aria-describedby="with-hint-info with-hint-hint">{{ data['w-why'] }}</textarea>
   </div>
-      <!-- <input class="govuk-input" id="full-name" name="w-how-much" type="text" spellcheck="false" autocomplete="name" value="{{ data['w-how-much'] }}"></div> -->
-<br>
-        <textarea class="govuk-textarea" id="more-detail" name="w-why" rows="3">{{ data['w-why'] }}</textarea>
+
+  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+    You can enter up to 200 characters
+  </div>
+
+</div>
 
 <br>
+
+
             <button class="govuk-button btn-primary" data-module="govuk-button">
               Save and continue
             </button>
